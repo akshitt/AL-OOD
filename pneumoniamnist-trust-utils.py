@@ -111,7 +111,7 @@ def load_dataset_custom_1(datadir, feature, split_cfg, augVal=False, dataAug=Tru
     
     fullset = ConcatDataset([pneumonia_full_train, cifar10_full_train])
     test_set = pneumonia_test
-    fullset.targets = np.append(pneumonia_full_train.targets, cifar10_full_train.targets)
+    fullset.targets = np.append(pneumonia_full_train.targets, [7 for i in range(50000)])
     test_set.targets = pneumonia_test.targets
     
     if(feature=="ood"):
@@ -149,7 +149,7 @@ def load_dataset_custom_2(datadir, feature, split_cfg, augVal=False, dataAug=Tru
     
     fullset = ConcatDataset([pneumonia_full_train, cifar10_full_train])
     test_set = pneumonia_test
-    fullset.targets = np.append(pneumonia_full_train.targets, cifar10_full_train.targets)
+    fullset.targets = np.append(pneumonia_full_train.targets, [7 for i in range(50000)])
     test_set.targets = pneumonia_test.targets
     
     if(feature=="ood"):

@@ -3,7 +3,7 @@
 ## File descriptions
 - **pneumoniamnist.npz**: Complete dataset as 6 numpy arrays (train_images, train_labels, test, val). pm_train, pm_test, pm_val are subsets with columns `images`,`labels`. just for convenience while loading.  
 - **ood-1.py**: final file. Direct o/p to `.txt` file. Jupyter file was just for ease of debugging.
-- **create-ood-2-img.ipynb**: for creating type-2 of OOD. View this [paper](https://arxiv.org/pdf/2007.04250.pdf) for more info. Generates *.png* images to be loaded by `torchvision.datasets.ImageFolder`.   
+- **create-ood-2-img.ipynb**: for creating type-2 of OOD. View this [paper](https://arxiv.org/pdf/2007.04250.pdf) for more info. Generates *.png* images to be loaded by `torchvision.datasets.ImageFolder`. **Add code for padding** as well. Run the entire notebook. 
 - **pneumonia-trust-utils.py**: Contains Custom Dataset class for pneumoniamnist. Rename to `pneumonia.py` and copy to `trust/utils/`.
 
 ## To-do

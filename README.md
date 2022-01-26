@@ -8,11 +8,13 @@
 
 ## To-do
 1. install [distil](https://github.com/decile-team/distil/) & [trust](https://github.com/decile-team/trust) (Preferably by cloning)
-2. Add both folders to path in ood-1.py
-3. Edit `pneumonia.py`
+2. Edit `pneumonia.py`
     - Change paths for train,test,val npz files
     - Write Custom Dataset for new images generated. Labels for all images would be `2` (all OOD data considered as one)  
-    - replace cifar10 with new dataset. 
+    - replace cifar10 with new dataset in `load_dataset_custom_2`.  
+3. Edit `ood-1.py`:
+    -  Add trust,distil to path
+    -  import `load_dataset_custom_2` instead [here](https://github.com/akshitt/AL-OOD/blob/e5d3e220a7c711f3e1272e0f2e11a99415f578d8/ood-1.py#L25)
 4. Run `ood-1.py` several times while altering -
     - [budget=5](https://github.com/akshitt/AL-OOD/blob/e5d3e220a7c711f3e1272e0f2e11a99415f578d8/ood-1.py#L69) (try out with 10,15,20)
     - [split_cfg['per_idc_train']](https://github.com/akshitt/AL-OOD/blob/e5d3e220a7c711f3e1272e0f2e11a99415f578d8/ood-1.py#L72) (try out with 10,15,20)

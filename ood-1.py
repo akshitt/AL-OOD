@@ -556,35 +556,35 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
     plt.title('Budget:'+str(budget)+'  Trainset:'+ str(split_cfg['per_idc_train']))
 
         
-# # LOGDETCMI
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmic')
+# LOGDETCMI
+train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmic')
 
-# ## FLCMI
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'flmic')
+## FLCMI
+train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'flmic')
 
-# # FL2MI
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'fl2mi')
+# FL2MI
+train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'fl2mi')
 
-# # FL1MI
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'fl1mi')
+# FL1MI
+train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'fl1mi')
 
-# # BADGE
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","badge")
+# BADGE
+train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","badge")
 
-# # US
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","us")
+# US
+train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","us")
 
-# # # GLISTER
-# # train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","glister-tss")
+# # GLISTER
+# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","glister-tss")
 
-# # # GCMI+DIV
-# # train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'div-gcmi')
+# # GCMI+DIV
+# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'div-gcmi')
 
-# # GCMI
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'gcmi')
+# GCMI
+train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'gcmi')
 
-# # LOGDETMI
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmi')
+# LOGDETMI
+train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmi')
 
 # Random
 train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "random",'random')

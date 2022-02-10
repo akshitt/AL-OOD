@@ -30,6 +30,7 @@ import tqdm
 from math import floor
 from sklearn.metrics.pairwise import cosine_similarity, pairwise_distances
 from distil.active_learning_strategies.scmi import SCMI
+from distil.active_learning_strategies.scg import SCG
 from distil.active_learning_strategies.smi import SMI
 from distil.active_learning_strategies.badge import BADGE
 from distil.active_learning_strategies.entropy_sampling import EntropySampling
@@ -69,7 +70,7 @@ embedding_type = "gradients"
 num_cls=7
 budget=30
 num_epochs = int(10)
-split_cfg = {'num_cls_idc':7, 'per_idc_train':20, 'per_idc_val':2, 'per_idc_lake':180, 'per_ood_train':0, 'per_ood_val':0, 'per_ood_lake':5000}
+split_cfg = {'num_cls_idc':num_cls, 'per_idc_train':20, 'per_idc_val':2, 'per_idc_lake':180, 'per_ood_train':0, 'per_ood_val':0, 'per_ood_lake':5000}
 
 initModelPath = "/mnt/data2/akshit/Derma/weights/" + data_name + "_" + feature + "_" + model_name + "_" + str(learning_rate) + "_" + str(split_cfg["per_idc_train"]) + "_" + str(split_cfg["per_idc_val"]) + "_" + str(split_cfg["num_cls_idc"])
 
@@ -318,6 +319,11 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
             strategy_sel = LeastConfidence(train_set, unlabeled_lake_set, model, num_cls, strategy_args)
         elif(sf=="margin"):
             strategy_sel = MarginSampling(train_set, unlabeled_lake_set, model, num_cls, strategy_args)
+            
+    if (strategy == "SCG"):
+        strategy_args['scg_function'] = sf
+        strategy_sel = SCG(train_set, unlabeled_lake_set, val_set, model, num_cls, strategy_args)
+        
     if(strategy == "SIM"):
         if(sf.endswith("mic")):
             strategy_args['scmi_function'] = sf.split("mic")[0] + "cmi"
@@ -325,6 +331,7 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
         elif(sf.endswith("mi")):
             strategy_args['smi_function'] = sf
             strategy_sel = SMI(train_set, unlabeled_lake_set, val_set, model, num_cls, strategy_args)
+                
     if(strategy == "random"):
         strategy_sel = RandomSampling(train_set, unlabeled_lake_set, model, num_cls, strategy_args)
         
@@ -412,6 +419,14 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
                         print("private set targets: ", private_set.targets)
                         strategy_sel.update_privates(private_set)
 
+            ####SCG####
+            if(strategy=="SCG"):
+                strategy_sel.update_queries(val_set) #In-dist samples are in Val 
+                if(len(private_set)!=0):
+                    print("private set targets: ", private_set.targets)
+                    strategy_sel.update_privates(private_set)
+
+            
             ###AL###
             elif(strategy=="AL"):
                 if(sf=="glister-tss" or sf=="gradmatch-tss"):
@@ -456,7 +471,7 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
             lakeloader = torch.utils.data.DataLoader(lake_set, batch_size=tst_batch_size, shuffle=False, pin_memory=True)
 
             if(augTarget):
-              valloader = torch.utils.data.DataLoader(val_set, batch_size=len(val_set), shuffle=False, pin_memory=True)
+                valloader = torch.utils.data.DataLoader(val_set, batch_size=len(val_set), shuffle=False, pin_memory=True)
             model = create_model(model_name, num_cls, device, strategy_args['embedding_type'])
             optimizer = optimizer_without_scheduler(model, learning_rate)
                 
@@ -550,26 +565,100 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
     #save results dir with test acc and per class selections
     with open(os.path.join(all_logs_dir, exp_name+".json"), 'w') as fp:
         json.dump(res_dict, fp)
-    plt.xlabel('AL epochs')
-    plt.ylabel('Test Accuracy')
-    plt.plot(tst_acc, label=f'{strategy}-{sf}')
-    plt.title('Budget:'+str(budget)+'  Trainset:'+ str(split_cfg['per_idc_train']))
+    
+    return tst_acc
 
-        
-# # LOGDETCMI
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmic')
 
-# ## FLCMI
-# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'flmic')
+## LOGDETCG
+logdetcg=[]
+for i in range(3):
+    logdetcg.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SCG",'logdetcg'))
+logdetcg = np.average(logdetcg, axis=0)    
+plt.plot(logdetcg, label=f'logdetcg')
+
+# LOGDETCMI
+logdetmic=[]
+for i in range(3):
+    logdetmic.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmic'))
+logdetmic = np.average(logdetmic, axis=0)    
+plt.plot(logdetmic, label=f'logdetmic')
+
+
+## FLCG
+flcg=[]
+for i in range(3):
+    flcg.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SCG",'flcg'))
+flcg = np.average(flcg, axis=0)    
+plt.plot(flcg, label=f'flcg')
+
+# US
+us=[]
+for i in range(3):
+    us.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL",'us'))
+us = np.average(us, axis=0)    
+plt.plot(us, label=f'us')
+
+
+# GCMI
+gcmi=[]
+for i in range(3):
+    gcmi.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'gcmi'))
+gcmi = np.average(gcmi, axis=0)    
+plt.plot(gcmi, label=f'gcmi')
 
 # FL2MI
-train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'fl2mi')
+fl2mi = []
+for i in range(3):
+    fl2mi.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'fl2mi'))
+fl2mi = np.average(fl2mi, axis=0)    
+plt.plot(fl2mi, label=f'fl2mi')
+
+# LOGDETMI
+logdetmi=[]
+for i in range(3):
+    logdetmi.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmi'))
+logdetmi = np.average(logdetmi, axis=0)    
+plt.plot(logdetmi, label=f'logdetmi')
 
 # FL1MI
-train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'fl1mi')
+fl1mi=[]
+for i in range(3):
+    fl1mi.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'fl1mi'))
+fl1mi = np.average(fl1mi, axis=0)    
+plt.plot(fl1mi, label=f'fl1mi')
 
 # BADGE
-train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","badge")
+badge=[]
+for i in range(3):
+    badge.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL",'badge'))
+badge = np.average(badge, axis=0)    
+plt.plot(badge, label=f'badge')
+
+# Random
+random=[]
+for i in range(3):
+    random.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "random",'random'))
+random = np.average(random, axis=0)    
+plt.plot(random, label=f'random')
+
+
+
+## FLCMI
+flmic=[]
+for i in range(3):
+    flmic.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'flmic'))
+flmic = np.average(flmic, axis=0)    
+plt.plot(flmic, label=f'flmic')
+
+
+
+plt.xlabel('AL epochs')
+plt.ylabel('Test Accuracy')
+plt.title('Budget:'+str(budget)+'  Trainset:'+ str(split_cfg['per_idc_train']))
+plt.legend(bbox_to_anchor=(1.04,1), borderaxespad=0)
+plt.savefig('Budget:'+str(budget)+'  Trainset:'+ str(split_cfg['per_idc_train']), bbox_inches='tight')
+plt.clf()
+
 
 # # US
 # train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","us")
@@ -580,13 +669,11 @@ train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, 
 # # LOGDETMI
 # train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmi')
 
-# Random
-train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "random",'random')
+# # LOGDETCMI
+# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'logdetmic')
 
-
-plt.legend(bbox_to_anchor=(1.04,1), borderaxespad=0)
-plt.savefig('Budget:'+str(budget)+'  Trainset:'+ str(split_cfg['per_idc_train']), bbox_inches='tight')
-plt.clf()
+# ## FLCMI
+# train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "SIM",'flmic')
 
 # # GLISTER
 # train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "AL","glister-tss")

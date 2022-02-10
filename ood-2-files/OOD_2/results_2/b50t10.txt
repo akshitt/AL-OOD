@@ -1,0 +1,697 @@
+Using Device: cuda:0
+SIM fl2mi
+num ood samples:  8000
+CIFAR-10 Custom dataset stats: Train size:  110 Val size:  110 Lake size:  9100 Test set:  3300
+selected classes are:  [ 0  1  2  3  4  5  6  7  8  9 10]
+Saving results to:  ./SMI_active_learning_results/organmnist/ood/fl2mi/50/fkna_3
+organmnist_ood_SIM_11_fl2mi_budget:50_epochs:10_linear:True_runsfkna_3
+AL epoch:  0
+initial training epoch
+Init model loaded from disk, skipping init training:  /mnt/data2/akshit/Organ/weights/organmnist_ood_ResNet18_0.01_10_10_11
+AL epoch:  1
+val, test error% for class  0  :  10.0 20.0
+val, test error% for class  1  :  0.0 30.67
+val, test error% for class  2  :  50.0 47.0
+val, test error% for class  3  :  10.0 18.0
+val, test error% for class  4  :  90.0 93.0
+val, test error% for class  5  :  50.0 60.67
+val, test error% for class  6  :  30.0 52.33
+val, test error% for class  7  :  0.0 14.67
+val, test error% for class  8  :  0.0 17.33
+val, test error% for class  9  :  70.0 62.0
+val, test error% for class  10  :  50.0 83.33
+36 / 50  idc points.
+selEpoch: 1, Selection Ended at: 2022-02-03 03:34:57.145887
+36 9050 9100
+After augmentation, size of train_set:  160  lake set:  9050  val set:  146
+Selection Epoch  1  Training epoch [ 1 ]  Training Acc:  0.21875Selection Epoch  1  Training epoch [ 2 ]  Training Acc:  0.125Selection Epoch  1  Training epoch [ 3 ]  Training Acc:  0.1375Selection Epoch  1  Training epoch [ 4 ]  Training Acc:  0.53125Selection Epoch  1  Training epoch [ 5 ]  Training Acc:  0.7875Selection Epoch  1  Training epoch [ 6 ]  Training Acc:  0.84375Selection Epoch  1  Training epoch [ 7 ]  Training Acc:  0.85Selection Epoch  1  Training epoch [ 8 ]  Training Acc:  0.95625Selection Epoch  1  Training epoch [ 9 ]  Training Acc:  0.9625Selection Epoch  1  Training epoch [ 10 ]  Training Acc:  0.96875Selection Epoch  1  Training epoch [ 11 ]  Training Acc:  0.975Selection Epoch  1  Training epoch [ 12 ]  Training Acc:  0.99375Epoch: 2 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.27205112390220165 0.99375 0.8443705439567566 0.7808219178082192 52.81464946269989 0.6093939393939394 6.336798191070557
+AL epoch:  2
+val, test error% for class  0  :  8.33 16.67
+val, test error% for class  1  :  7.14 36.67
+val, test error% for class  2  :  33.33 25.0
+val, test error% for class  3  :  6.67 32.33
+val, test error% for class  4  :  72.73 68.0
+val, test error% for class  5  :  64.29 80.0
+val, test error% for class  6  :  21.43 34.0
+val, test error% for class  7  :  0.0 16.67
+val, test error% for class  8  :  7.69 18.33
+val, test error% for class  9  :  7.14 33.0
+val, test error% for class  10  :  23.08 69.0
+46 / 50  idc points.
+selEpoch: 2, Selection Ended at: 2022-02-03 03:35:28.005190
+46 9000 9050
+After augmentation, size of train_set:  210  lake set:  9000  val set:  192
+Selection Epoch  2  Training epoch [ 1 ]  Training Acc:  0.18571428571428572Selection Epoch  2  Training epoch [ 2 ]  Training Acc:  0.24761904761904763Selection Epoch  2  Training epoch [ 3 ]  Training Acc:  0.5666666666666667Selection Epoch  2  Training epoch [ 4 ]  Training Acc:  0.4142857142857143Selection Epoch  2  Training epoch [ 5 ]  Training Acc:  0.9047619047619048Selection Epoch  2  Training epoch [ 6 ]  Training Acc:  0.8761904761904762Selection Epoch  2  Training epoch [ 7 ]  Training Acc:  0.9428571428571428Selection Epoch  2  Training epoch [ 8 ]  Training Acc:  0.9571428571428572Selection Epoch  2  Training epoch [ 9 ]  Training Acc:  0.9952380952380953Epoch: 3 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.2686577448621392 0.9952380952380953 0.6472604870796204 0.8697916666666666 48.88533882051706 0.6654545454545454 6.1302268505096436
+AL epoch:  3
+val, test error% for class  0  :  5.88 29.67
+val, test error% for class  1  :  11.11 24.33
+val, test error% for class  2  :  21.43 25.0
+val, test error% for class  3  :  5.0 19.67
+val, test error% for class  4  :  31.25 62.67
+val, test error% for class  5  :  27.78 62.67
+val, test error% for class  6  :  5.0 14.0
+val, test error% for class  7  :  17.65 30.67
+val, test error% for class  8  :  0.0 2.67
+val, test error% for class  9  :  0.0 27.33
+val, test error% for class  10  :  21.05 69.33
+49 / 50  idc points.
+selEpoch: 3, Selection Ended at: 2022-02-03 03:35:55.970584
+49 8950 9000
+After augmentation, size of train_set:  260  lake set:  8950  val set:  241
+Selection Epoch  3  Training epoch [ 1 ]  Training Acc:  0.16153846153846155Selection Epoch  3  Training epoch [ 2 ]  Training Acc:  0.13846153846153847Selection Epoch  3  Training epoch [ 3 ]  Training Acc:  0.35Selection Epoch  3  Training epoch [ 4 ]  Training Acc:  0.7615384615384615Selection Epoch  3  Training epoch [ 5 ]  Training Acc:  0.7692307692307693Selection Epoch  3  Training epoch [ 6 ]  Training Acc:  0.9538461538461539Selection Epoch  3  Training epoch [ 7 ]  Training Acc:  0.9346153846153846Selection Epoch  3  Training epoch [ 8 ]  Training Acc:  0.9923076923076923Epoch: 4 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.41456498112529516 0.9923076923076923 0.3718602657318115 0.9128630705394191 39.774316027760506 0.6866666666666666 7.023178815841675
+AL epoch:  4
+val, test error% for class  0  :  4.55 13.0
+val, test error% for class  1  :  0.0 26.33
+val, test error% for class  2  :  16.67 26.0
+val, test error% for class  3  :  4.35 22.0
+val, test error% for class  4  :  40.0 76.67
+val, test error% for class  5  :  16.67 55.33
+val, test error% for class  6  :  0.0 5.0
+val, test error% for class  7  :  0.0 22.33
+val, test error% for class  8  :  0.0 14.67
+val, test error% for class  9  :  14.29 34.33
+val, test error% for class  10  :  4.55 49.0
+50 / 50  idc points.
+selEpoch: 4, Selection Ended at: 2022-02-03 03:36:23.811127
+50 8900 8950
+After augmentation, size of train_set:  310  lake set:  8900  val set:  291
+Selection Epoch  4  Training epoch [ 1 ]  Training Acc:  0.11935483870967742Selection Epoch  4  Training epoch [ 2 ]  Training Acc:  0.22258064516129034Selection Epoch  4  Training epoch [ 3 ]  Training Acc:  0.5612903225806452Selection Epoch  4  Training epoch [ 4 ]  Training Acc:  0.667741935483871Selection Epoch  4  Training epoch [ 5 ]  Training Acc:  0.8612903225806452Selection Epoch  4  Training epoch [ 6 ]  Training Acc:  0.9354838709677419Selection Epoch  4  Training epoch [ 7 ]  Training Acc:  0.9967741935483871Epoch: 5 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.5685817464254797 0.9967741935483871 0.36428171396255493 0.9175257731958762 38.42287668585777 0.7033333333333334 7.377254486083984
+AL epoch:  5
+val, test error% for class  0  :  3.7 15.0
+val, test error% for class  1  :  0.0 19.33
+val, test error% for class  2  :  18.18 18.67
+val, test error% for class  3  :  3.85 19.67
+val, test error% for class  4  :  19.23 43.67
+val, test error% for class  5  :  17.24 55.0
+val, test error% for class  6  :  3.33 15.0
+val, test error% for class  7  :  0.0 5.67
+val, test error% for class  8  :  0.0 20.33
+val, test error% for class  9  :  12.0 54.0
+val, test error% for class  10  :  15.38 60.0
+47 / 50  idc points.
+selEpoch: 5, Selection Ended at: 2022-02-03 03:36:53.739876
+47 8850 8900
+After augmentation, size of train_set:  360  lake set:  8850  val set:  338
+Selection Epoch  5  Training epoch [ 1 ]  Training Acc:  0.13333333333333333Selection Epoch  5  Training epoch [ 2 ]  Training Acc:  0.4027777777777778Selection Epoch  5  Training epoch [ 3 ]  Training Acc:  0.5166666666666667Selection Epoch  5  Training epoch [ 4 ]  Training Acc:  0.8472222222222222Selection Epoch  5  Training epoch [ 5 ]  Training Acc:  0.9027777777777778Selection Epoch  5  Training epoch [ 6 ]  Training Acc:  0.95Selection Epoch  5  Training epoch [ 7 ]  Training Acc:  0.9777777777777777Selection Epoch  5  Training epoch [ 8 ]  Training Acc:  0.975Selection Epoch  5  Training epoch [ 9 ]  Training Acc:  0.9666666666666667Selection Epoch  5  Training epoch [ 10 ]  Training Acc:  0.9888888888888889Selection Epoch  5  Training epoch [ 11 ]  Training Acc:  0.9583333333333334Selection Epoch  5  Training epoch [ 12 ]  Training Acc:  1.0Epoch: 6 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.09035098360618576 1.0 0.2515130937099457 0.9497041420118343 40.203911513090134 0.7254545454545455 14.429725646972656
+AL epoch:  6
+val, test error% for class  0  :  3.23 18.33
+val, test error% for class  1  :  0.0 17.0
+val, test error% for class  2  :  12.0 14.67
+val, test error% for class  3  :  3.33 20.33
+val, test error% for class  4  :  7.14 50.67
+val, test error% for class  5  :  15.15 50.0
+val, test error% for class  6  :  2.78 11.67
+val, test error% for class  7  :  0.0 6.0
+val, test error% for class  8  :  0.0 13.33
+val, test error% for class  9  :  6.67 43.33
+val, test error% for class  10  :  6.25 56.67
+50 / 50  idc points.
+selEpoch: 6, Selection Ended at: 2022-02-03 03:37:33.005373
+50 8800 8850
+After augmentation, size of train_set:  410  lake set:  8800  val set:  388
+Selection Epoch  6  Training epoch [ 1 ]  Training Acc:  0.12439024390243902Selection Epoch  6  Training epoch [ 2 ]  Training Acc:  0.23902439024390243Selection Epoch  6  Training epoch [ 3 ]  Training Acc:  0.6292682926829268Selection Epoch  6  Training epoch [ 4 ]  Training Acc:  0.7219512195121951Selection Epoch  6  Training epoch [ 5 ]  Training Acc:  0.748780487804878Selection Epoch  6  Training epoch [ 6 ]  Training Acc:  0.8853658536585366Selection Epoch  6  Training epoch [ 7 ]  Training Acc:  0.9780487804878049Selection Epoch  6  Training epoch [ 8 ]  Training Acc:  0.9585365853658536Selection Epoch  6  Training epoch [ 9 ]  Training Acc:  0.9804878048780488Selection Epoch  6  Training epoch [ 10 ]  Training Acc:  0.9707317073170731Selection Epoch  6  Training epoch [ 11 ]  Training Acc:  0.9804878048780488Selection Epoch  6  Training epoch [ 12 ]  Training Acc:  1.0Epoch: 7 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.5809257440268993 1.0 0.28073328733444214 0.9381443298969072 42.70230516791344 0.7057575757575758 16.167203664779663
+AL epoch:  7
+val, test error% for class  0  :  8.11 26.67
+val, test error% for class  1  :  0.0 13.33
+val, test error% for class  2  :  10.34 14.0
+val, test error% for class  3  :  2.78 26.0
+val, test error% for class  4  :  18.18 50.33
+val, test error% for class  5  :  13.89 46.33
+val, test error% for class  6  :  2.5 29.0
+val, test error% for class  7  :  0.0 17.0
+val, test error% for class  8  :  0.0 5.0
+val, test error% for class  9  :  2.94 22.67
+val, test error% for class  10  :  10.53 73.33
+48 / 50  idc points.
+selEpoch: 7, Selection Ended at: 2022-02-03 03:38:11.223278
+48 8750 8800
+After augmentation, size of train_set:  460  lake set:  8750  val set:  436
+Selection Epoch  7  Training epoch [ 1 ]  Training Acc:  0.16521739130434782Selection Epoch  7  Training epoch [ 2 ]  Training Acc:  0.5608695652173913Selection Epoch  7  Training epoch [ 3 ]  Training Acc:  0.8369565217391305Selection Epoch  7  Training epoch [ 4 ]  Training Acc:  0.8847826086956522Selection Epoch  7  Training epoch [ 5 ]  Training Acc:  0.7565217391304347Selection Epoch  7  Training epoch [ 6 ]  Training Acc:  0.9152173913043479Selection Epoch  7  Training epoch [ 7 ]  Training Acc:  0.9630434782608696Selection Epoch  7  Training epoch [ 8 ]  Training Acc:  0.9869565217391304Selection Epoch  7  Training epoch [ 9 ]  Training Acc:  0.9782608695652174Selection Epoch  7  Training epoch [ 10 ]  Training Acc:  0.9826086956521739Selection Epoch  7  Training epoch [ 11 ]  Training Acc:  0.9782608695652174Selection Epoch  7  Training epoch [ 12 ]  Training Acc:  0.9956521739130435Epoch: 8 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.5460409810184501 0.9956521739130435 0.1647595465183258 0.9724770642201835 42.00699271261692 0.7263636363636363 18.39600896835327
+AL epoch:  8
+val, test error% for class  0  :  2.5 16.67
+val, test error% for class  1  :  0.0 27.67
+val, test error% for class  2  :  6.25 20.0
+val, test error% for class  3  :  2.44 10.33
+val, test error% for class  4  :  8.57 66.33
+val, test error% for class  5  :  9.3 42.33
+val, test error% for class  6  :  0.0 9.0
+val, test error% for class  7  :  0.0 14.67
+val, test error% for class  8  :  0.0 14.67
+val, test error% for class  9  :  2.63 43.67
+val, test error% for class  10  :  0.0 35.67
+48 / 50  idc points.
+selEpoch: 8, Selection Ended at: 2022-02-03 03:38:51.556639
+48 8700 8750
+After augmentation, size of train_set:  510  lake set:  8700  val set:  484
+Selection Epoch  8  Training epoch [ 1 ]  Training Acc:  0.37450980392156863Selection Epoch  8  Training epoch [ 2 ]  Training Acc:  0.7470588235294118Selection Epoch  8  Training epoch [ 3 ]  Training Acc:  0.8784313725490196Selection Epoch  8  Training epoch [ 4 ]  Training Acc:  0.8980392156862745Selection Epoch  8  Training epoch [ 5 ]  Training Acc:  0.9450980392156862Selection Epoch  8  Training epoch [ 6 ]  Training Acc:  0.9549019607843138Selection Epoch  8  Training epoch [ 7 ]  Training Acc:  0.9725490196078431Selection Epoch  8  Training epoch [ 8 ]  Training Acc:  0.9941176470588236Epoch: 9 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.5655460588168353 0.9941176470588236 0.17680560052394867 0.9586776859504132 42.69844064116478 0.713939393939394 13.523713827133179
+AL epoch:  9
+val, test error% for class  0  :  4.17 14.67
+val, test error% for class  1  :  0.0 28.0
+val, test error% for class  2  :  13.89 24.33
+val, test error% for class  3  :  2.17 21.0
+val, test error% for class  4  :  10.26 41.67
+val, test error% for class  5  :  6.38 28.67
+val, test error% for class  6  :  1.96 32.67
+val, test error% for class  7  :  0.0 17.67
+val, test error% for class  8  :  0.0 9.67
+val, test error% for class  9  :  2.5 49.0
+val, test error% for class  10  :  6.12 47.33
+44 / 50  idc points.
+selEpoch: 9, Selection Ended at: 2022-02-03 03:39:27.008398
+44 8650 8700
+After augmentation, size of train_set:  560  lake set:  8650  val set:  528
+Selection Epoch  9  Training epoch [ 1 ]  Training Acc:  0.37857142857142856Selection Epoch  9  Training epoch [ 2 ]  Training Acc:  0.7232142857142857Selection Epoch  9  Training epoch [ 3 ]  Training Acc:  0.9017857142857143Selection Epoch  9  Training epoch [ 4 ]  Training Acc:  0.8857142857142857Selection Epoch  9  Training epoch [ 5 ]  Training Acc:  0.9517857142857142Selection Epoch  9  Training epoch [ 6 ]  Training Acc:  0.9821428571428571Selection Epoch  9  Training epoch [ 7 ]  Training Acc:  0.9910714285714286Epoch: 10 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 1.017936009913683 0.9910714285714286 0.1426798403263092 0.9602272727272727 39.881854102015495 0.6878787878787879 13.138141393661499
+val, test error% for class  0  :  1.89 13.33
+val, test error% for class  1  :  0.0 32.0
+val, test error% for class  2  :  5.13 16.33
+val, test error% for class  3  :  1.92 20.67
+val, test error% for class  4  :  14.63 61.67
+val, test error% for class  5  :  5.88 51.33
+val, test error% for class  6  :  1.82 34.67
+val, test error% for class  7  :  4.0 26.0
+val, test error% for class  8  :  0.0 2.67
+val, test error% for class  9  :  2.27 33.67
+val, test error% for class  10  :  7.41 51.0
+[[20.0, 30.67, 47.0, 18.0, 93.0, 60.67, 52.33, 14.67, 17.33, 62.0, 83.33, 45.36363636363637], [16.67, 36.67, 25.0, 32.33, 68.0, 80.0, 34.0, 16.67, 18.33, 33.0, 69.0, 39.06090909090909], [29.67, 24.33, 25.0, 19.67, 62.67, 62.67, 14.0, 30.67, 2.67, 27.33, 69.33, 33.45545454545454], [13.0, 26.33, 26.0, 22.0, 76.67, 55.33, 5.0, 22.33, 14.67, 34.33, 49.0, 31.33272727272727], [15.0, 19.33, 18.67, 19.67, 43.67, 55.0, 15.0, 5.67, 20.33, 54.0, 60.0, 29.667272727272724], [18.33, 17.0, 14.67, 20.33, 50.67, 50.0, 11.67, 6.0, 13.33, 43.33, 56.67, 27.454545454545453], [26.67, 13.33, 14.0, 26.0, 50.33, 46.33, 29.0, 17.0, 5.0, 22.67, 73.33, 29.423636363636362], [16.67, 27.67, 20.0, 10.33, 66.33, 42.33, 9.0, 14.67, 14.67, 43.67, 35.67, 27.364545454545453], [14.67, 28.0, 24.33, 21.0, 41.67, 28.67, 32.67, 17.67, 9.67, 49.0, 47.33, 28.60727272727273], [13.33, 32.0, 16.33, 20.67, 61.67, 51.33, 34.67, 26.0, 2.67, 33.67, 51.0, 31.212727272727275]]
+SIM fl1mi
+num ood samples:  8000
+CIFAR-10 Custom dataset stats: Train size:  110 Val size:  110 Lake size:  9100 Test set:  3300
+selected classes are:  [ 0  1  2  3  4  5  6  7  8  9 10]
+Saving results to:  ./SMI_active_learning_results/organmnist/ood/fl1mi/50/fkna_3
+organmnist_ood_SIM_11_fl1mi_budget:50_epochs:10_linear:True_runsfkna_3
+AL epoch:  0
+initial training epoch
+Init model loaded from disk, skipping init training:  /mnt/data2/akshit/Organ/weights/organmnist_ood_ResNet18_0.01_10_10_11
+AL epoch:  1
+val, test error% for class  0  :  10.0 20.0
+val, test error% for class  1  :  0.0 30.67
+val, test error% for class  2  :  50.0 47.0
+val, test error% for class  3  :  10.0 18.0
+val, test error% for class  4  :  90.0 93.0
+val, test error% for class  5  :  50.0 60.67
+val, test error% for class  6  :  30.0 52.33
+val, test error% for class  7  :  0.0 14.67
+val, test error% for class  8  :  0.0 17.33
+val, test error% for class  9  :  70.0 62.0
+val, test error% for class  10  :  50.0 83.33
+13 / 50  idc points.
+selEpoch: 1, Selection Ended at: 2022-02-03 03:40:49.279625
+13 9050 9100
+After augmentation, size of train_set:  160  lake set:  9050  val set:  123
+Selection Epoch  1  Training epoch [ 1 ]  Training Acc:  0.19375Selection Epoch  1  Training epoch [ 2 ]  Training Acc:  0.1Selection Epoch  1  Training epoch [ 3 ]  Training Acc:  0.15Selection Epoch  1  Training epoch [ 4 ]  Training Acc:  0.4125Selection Epoch  1  Training epoch [ 5 ]  Training Acc:  0.55Selection Epoch  1  Training epoch [ 6 ]  Training Acc:  0.85625Selection Epoch  1  Training epoch [ 7 ]  Training Acc:  0.94375Selection Epoch  1  Training epoch [ 8 ]  Training Acc:  0.9125Selection Epoch  1  Training epoch [ 9 ]  Training Acc:  0.94375Selection Epoch  1  Training epoch [ 10 ]  Training Acc:  1.0Epoch: 2 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.0861247528810054 1.0 1.0910766124725342 0.7723577235772358 54.43903307616711 0.6293939393939394 5.433496475219727
+AL epoch:  2
+val, test error% for class  0  :  9.09 14.67
+val, test error% for class  1  :  10.0 41.67
+val, test error% for class  2  :  18.18 15.33
+val, test error% for class  3  :  15.38 19.33
+val, test error% for class  4  :  45.45 74.33
+val, test error% for class  5  :  50.0 44.33
+val, test error% for class  6  :  36.36 65.33
+val, test error% for class  7  :  18.18 16.0
+val, test error% for class  8  :  0.0 2.67
+val, test error% for class  9  :  16.67 37.33
+val, test error% for class  10  :  36.36 76.67
+50 / 50  idc points.
+selEpoch: 2, Selection Ended at: 2022-02-03 03:41:58.165882
+50 9000 9050
+After augmentation, size of train_set:  210  lake set:  9000  val set:  173
+Selection Epoch  2  Training epoch [ 1 ]  Training Acc:  0.20476190476190476Selection Epoch  2  Training epoch [ 2 ]  Training Acc:  0.08571428571428572Selection Epoch  2  Training epoch [ 3 ]  Training Acc:  0.18571428571428572Selection Epoch  2  Training epoch [ 4 ]  Training Acc:  0.44761904761904764Selection Epoch  2  Training epoch [ 5 ]  Training Acc:  0.719047619047619Selection Epoch  2  Training epoch [ 6 ]  Training Acc:  0.7238095238095238Selection Epoch  2  Training epoch [ 7 ]  Training Acc:  0.9857142857142858Selection Epoch  2  Training epoch [ 8 ]  Training Acc:  0.8714285714285714Selection Epoch  2  Training epoch [ 9 ]  Training Acc:  0.9476190476190476Selection Epoch  2  Training epoch [ 10 ]  Training Acc:  0.9523809523809523Selection Epoch  2  Training epoch [ 11 ]  Training Acc:  0.9809523809523809Selection Epoch  2  Training epoch [ 12 ]  Training Acc:  0.9857142857142858Selection Epoch  2  Training epoch [ 13 ]  Training Acc:  0.9857142857142858Selection Epoch  2  Training epoch [ 14 ]  Training Acc:  1.0Epoch: 3 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.08072178473230451 1.0 0.9157280921936035 0.8034682080924855 54.51937863230705 0.6506060606060606 9.849978923797607
+AL epoch:  3
+val, test error% for class  0  :  12.5 13.0
+val, test error% for class  1  :  6.67 19.67
+val, test error% for class  2  :  20.0 21.0
+val, test error% for class  3  :  11.76 26.0
+val, test error% for class  4  :  38.89 59.0
+val, test error% for class  5  :  46.67 65.33
+val, test error% for class  6  :  26.67 61.0
+val, test error% for class  7  :  0.0 11.0
+val, test error% for class  8  :  0.0 2.67
+val, test error% for class  9  :  33.33 41.67
+val, test error% for class  10  :  18.75 64.0
+49 / 50  idc points.
+selEpoch: 3, Selection Ended at: 2022-02-03 03:43:10.414412
+49 8950 9000
+After augmentation, size of train_set:  260  lake set:  8950  val set:  222
+Selection Epoch  3  Training epoch [ 1 ]  Training Acc:  0.13076923076923078Selection Epoch  3  Training epoch [ 2 ]  Training Acc:  0.17307692307692307Selection Epoch  3  Training epoch [ 3 ]  Training Acc:  0.28846153846153844Selection Epoch  3  Training epoch [ 4 ]  Training Acc:  0.7Selection Epoch  3  Training epoch [ 5 ]  Training Acc:  0.9346153846153846Selection Epoch  3  Training epoch [ 6 ]  Training Acc:  0.9807692307692307Selection Epoch  3  Training epoch [ 7 ]  Training Acc:  0.9692307692307692Selection Epoch  3  Training epoch [ 8 ]  Training Acc:  0.9961538461538462Epoch: 4 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.32957083149813116 0.9961538461538462 0.622809112071991 0.8558558558558559 44.286192044615746 0.6684848484848485 6.8425209522247314
+AL epoch:  4
+val, test error% for class  0  :  13.04 20.0
+val, test error% for class  1  :  0.0 24.33
+val, test error% for class  2  :  29.41 17.33
+val, test error% for class  3  :  4.76 13.33
+val, test error% for class  4  :  40.0 57.0
+val, test error% for class  5  :  31.82 65.67
+val, test error% for class  6  :  20.0 42.67
+val, test error% for class  7  :  5.56 16.33
+val, test error% for class  8  :  0.0 5.0
+val, test error% for class  9  :  5.0 63.0
+val, test error% for class  10  :  8.0 40.0
+47 / 50  idc points.
+selEpoch: 4, Selection Ended at: 2022-02-03 03:44:14.012918
+47 8900 8950
+After augmentation, size of train_set:  310  lake set:  8900  val set:  269
+Selection Epoch  4  Training epoch [ 1 ]  Training Acc:  0.12580645161290321Selection Epoch  4  Training epoch [ 2 ]  Training Acc:  0.1967741935483871Selection Epoch  4  Training epoch [ 3 ]  Training Acc:  0.6935483870967742Selection Epoch  4  Training epoch [ 4 ]  Training Acc:  0.8032258064516129Selection Epoch  4  Training epoch [ 5 ]  Training Acc:  0.9096774193548387Selection Epoch  4  Training epoch [ 6 ]  Training Acc:  0.9096774193548387Selection Epoch  4  Training epoch [ 7 ]  Training Acc:  0.8225806451612904Selection Epoch  4  Training epoch [ 8 ]  Training Acc:  0.9870967741935484Selection Epoch  4  Training epoch [ 9 ]  Training Acc:  0.8064516129032258Selection Epoch  4  Training epoch [ 10 ]  Training Acc:  0.9935483870967742Epoch: 5 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.6150674014352262 0.9935483870967742 0.43565043807029724 0.9107806691449815 40.78881970047951 0.6896969696969697 10.099506855010986
+AL epoch:  5
+val, test error% for class  0  :  11.11 20.0
+val, test error% for class  1  :  0.0 18.33
+val, test error% for class  2  :  15.0 19.33
+val, test error% for class  3  :  0.0 16.67
+val, test error% for class  4  :  33.33 75.33
+val, test error% for class  5  :  12.5 37.67
+val, test error% for class  6  :  3.33 44.0
+val, test error% for class  7  :  4.35 12.33
+val, test error% for class  8  :  0.0 14.0
+val, test error% for class  9  :  12.5 49.33
+val, test error% for class  10  :  10.34 34.33
+50 / 50  idc points.
+selEpoch: 5, Selection Ended at: 2022-02-03 03:45:25.335279
+50 8850 8900
+After augmentation, size of train_set:  360  lake set:  8850  val set:  319
+Selection Epoch  5  Training epoch [ 1 ]  Training Acc:  0.15833333333333333Selection Epoch  5  Training epoch [ 2 ]  Training Acc:  0.35Selection Epoch  5  Training epoch [ 3 ]  Training Acc:  0.6166666666666667Selection Epoch  5  Training epoch [ 4 ]  Training Acc:  0.9138888888888889Selection Epoch  5  Training epoch [ 5 ]  Training Acc:  0.9027777777777778Selection Epoch  5  Training epoch [ 6 ]  Training Acc:  0.9638888888888889Selection Epoch  5  Training epoch [ 7 ]  Training Acc:  0.9916666666666667Epoch: 6 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.9419748270884156 0.9916666666666667 0.29981115460395813 0.9184952978056427 46.763992918655276 0.6675757575757576 8.299659252166748
+AL epoch:  6
+val, test error% for class  0  :  9.68 24.0
+val, test error% for class  1  :  0.0 35.33
+val, test error% for class  2  :  20.0 31.67
+val, test error% for class  3  :  3.33 21.33
+val, test error% for class  4  :  14.81 48.67
+val, test error% for class  5  :  10.71 52.0
+val, test error% for class  6  :  14.29 46.67
+val, test error% for class  7  :  3.7 26.67
+val, test error% for class  8  :  0.0 1.33
+val, test error% for class  9  :  3.45 10.67
+val, test error% for class  10  :  8.82 67.33
+44 / 50  idc points.
+selEpoch: 6, Selection Ended at: 2022-02-03 03:46:31.885115
+44 8800 8850
+After augmentation, size of train_set:  410  lake set:  8800  val set:  363
+Selection Epoch  6  Training epoch [ 1 ]  Training Acc:  0.22195121951219512Selection Epoch  6  Training epoch [ 2 ]  Training Acc:  0.5121951219512195Selection Epoch  6  Training epoch [ 3 ]  Training Acc:  0.7073170731707317Selection Epoch  6  Training epoch [ 4 ]  Training Acc:  0.8780487804878049Selection Epoch  6  Training epoch [ 5 ]  Training Acc:  0.8048780487804879Selection Epoch  6  Training epoch [ 6 ]  Training Acc:  0.9195121951219513Selection Epoch  6  Training epoch [ 7 ]  Training Acc:  0.9853658536585366Selection Epoch  6  Training epoch [ 8 ]  Training Acc:  0.9878048780487805Selection Epoch  6  Training epoch [ 9 ]  Training Acc:  0.9975609756097561Epoch: 7 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.2747416881029494 0.9975609756097561 0.2959597110748291 0.9421487603305785 38.41925925016403 0.7090909090909091 12.032026290893555
+AL epoch:  7
+val, test error% for class  0  :  2.78 7.0
+val, test error% for class  1  :  0.0 21.33
+val, test error% for class  2  :  7.14 23.33
+val, test error% for class  3  :  3.03 27.33
+val, test error% for class  4  :  16.67 55.33
+val, test error% for class  5  :  15.15 60.33
+val, test error% for class  6  :  2.56 23.67
+val, test error% for class  7  :  3.23 12.67
+val, test error% for class  8  :  0.0 23.67
+val, test error% for class  9  :  9.09 40.67
+val, test error% for class  10  :  5.41 24.67
+47 / 50  idc points.
+selEpoch: 7, Selection Ended at: 2022-02-03 03:47:41.954057
+47 8750 8800
+After augmentation, size of train_set:  460  lake set:  8750  val set:  410
+Selection Epoch  7  Training epoch [ 1 ]  Training Acc:  0.13260869565217392Selection Epoch  7  Training epoch [ 2 ]  Training Acc:  0.6043478260869565Selection Epoch  7  Training epoch [ 3 ]  Training Acc:  0.7130434782608696Selection Epoch  7  Training epoch [ 4 ]  Training Acc:  0.8717391304347826Selection Epoch  7  Training epoch [ 5 ]  Training Acc:  0.9347826086956522Selection Epoch  7  Training epoch [ 6 ]  Training Acc:  0.9782608695652174Selection Epoch  7  Training epoch [ 7 ]  Training Acc:  0.9239130434782609Selection Epoch  7  Training epoch [ 8 ]  Training Acc:  0.991304347826087Epoch: 8 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.6161260628141463 0.991304347826087 0.25827333331108093 0.9317073170731708 35.83112558722496 0.7403030303030304 12.112892866134644
+AL epoch:  8
+val, test error% for class  0  :  4.76 20.67
+val, test error% for class  1  :  0.0 14.67
+val, test error% for class  2  :  9.68 17.0
+val, test error% for class  3  :  2.78 11.67
+val, test error% for class  4  :  29.41 68.0
+val, test error% for class  5  :  13.89 35.33
+val, test error% for class  6  :  2.17 10.67
+val, test error% for class  7  :  0.0 21.33
+val, test error% for class  8  :  0.0 3.0
+val, test error% for class  9  :  8.11 44.33
+val, test error% for class  10  :  7.14 39.0
+47 / 50  idc points.
+selEpoch: 8, Selection Ended at: 2022-02-03 03:48:46.975236
+47 8700 8750
+After augmentation, size of train_set:  510  lake set:  8700  val set:  457
+Selection Epoch  8  Training epoch [ 1 ]  Training Acc:  0.11176470588235295Selection Epoch  8  Training epoch [ 2 ]  Training Acc:  0.5490196078431373Selection Epoch  8  Training epoch [ 3 ]  Training Acc:  0.8588235294117647Selection Epoch  8  Training epoch [ 4 ]  Training Acc:  0.8647058823529412Selection Epoch  8  Training epoch [ 5 ]  Training Acc:  0.9352941176470588Selection Epoch  8  Training epoch [ 6 ]  Training Acc:  0.9607843137254902Selection Epoch  8  Training epoch [ 7 ]  Training Acc:  0.8901960784313725Selection Epoch  8  Training epoch [ 8 ]  Training Acc:  0.9901960784313726Epoch: 9 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.9997119827894494 0.9901960784313726 0.2564525902271271 0.9431072210065645 46.195969611406326 0.6718181818181819 13.32598066329956
+AL epoch:  9
+val, test error% for class  0  :  8.51 38.0
+val, test error% for class  1  :  0.0 23.33
+val, test error% for class  2  :  14.71 24.33
+val, test error% for class  3  :  2.33 29.0
+val, test error% for class  4  :  13.16 61.33
+val, test error% for class  5  :  11.9 56.0
+val, test error% for class  6  :  1.96 13.33
+val, test error% for class  7  :  0.0 16.0
+val, test error% for class  8  :  2.86 26.33
+val, test error% for class  9  :  2.5 43.33
+val, test error% for class  10  :  6.52 30.0
+49 / 50  idc points.
+selEpoch: 9, Selection Ended at: 2022-02-03 03:50:08.527297
+49 8650 8700
+After augmentation, size of train_set:  560  lake set:  8650  val set:  506
+Selection Epoch  9  Training epoch [ 1 ]  Training Acc:  0.1357142857142857Selection Epoch  9  Training epoch [ 2 ]  Training Acc:  0.6035714285714285Selection Epoch  9  Training epoch [ 3 ]  Training Acc:  0.7928571428571428Selection Epoch  9  Training epoch [ 4 ]  Training Acc:  0.9160714285714285Selection Epoch  9  Training epoch [ 5 ]  Training Acc:  0.9696428571428571Selection Epoch  9  Training epoch [ 6 ]  Training Acc:  0.9857142857142858Selection Epoch  9  Training epoch [ 7 ]  Training Acc:  0.9875Selection Epoch  9  Training epoch [ 8 ]  Training Acc:  0.9767857142857143Selection Epoch  9  Training epoch [ 9 ]  Training Acc:  0.9892857142857143Selection Epoch  9  Training epoch [ 10 ]  Training Acc:  0.9928571428571429Epoch: 10 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.6649252346833237 0.9928571428571429 0.17564982175827026 0.9624505928853755 34.99010619521141 0.7481818181818182 18.420909881591797
+val, test error% for class  0  :  0.0 10.67
+val, test error% for class  1  :  0.0 20.67
+val, test error% for class  2  :  18.42 31.0
+val, test error% for class  3  :  0.0 21.33
+val, test error% for class  4  :  11.11 33.33
+val, test error% for class  5  :  8.89 45.67
+val, test error% for class  6  :  0.0 13.67
+val, test error% for class  7  :  0.0 13.67
+val, test error% for class  8  :  0.0 7.0
+val, test error% for class  9  :  4.55 35.33
+val, test error% for class  10  :  1.96 44.67
+[[20.0, 30.67, 47.0, 18.0, 93.0, 60.67, 52.33, 14.67, 17.33, 62.0, 83.33, 45.36363636363637], [14.67, 41.67, 15.33, 19.33, 74.33, 44.33, 65.33, 16.0, 2.67, 37.33, 76.67, 37.059999999999995], [13.0, 19.67, 21.0, 26.0, 59.0, 65.33, 61.0, 11.0, 2.67, 41.67, 64.0, 34.940000000000005], [20.0, 24.33, 17.33, 13.33, 57.0, 65.67, 42.67, 16.33, 5.0, 63.0, 40.0, 33.150909090909096], [20.0, 18.33, 19.33, 16.67, 75.33, 37.67, 44.0, 12.33, 14.0, 49.33, 34.33, 31.029090909090904], [24.0, 35.33, 31.67, 21.33, 48.67, 52.0, 46.67, 26.67, 1.33, 10.67, 67.33, 33.24272727272727], [7.0, 21.33, 23.33, 27.33, 55.33, 60.33, 23.67, 12.67, 23.67, 40.67, 24.67, 29.09090909090909], [20.67, 14.67, 17.0, 11.67, 68.0, 35.33, 10.67, 21.33, 3.0, 44.33, 39.0, 25.969999999999995], [38.0, 23.33, 24.33, 29.0, 61.33, 56.0, 13.33, 16.0, 26.33, 43.33, 30.0, 32.81636363636364], [10.67, 20.67, 31.0, 21.33, 33.33, 45.67, 13.67, 13.67, 7.0, 35.33, 44.67, 25.182727272727274]]
+AL badge
+num ood samples:  8000
+CIFAR-10 Custom dataset stats: Train size:  110 Val size:  110 Lake size:  9100 Test set:  3300
+selected classes are:  [ 0  1  2  3  4  5  6  7  8  9 10]
+Saving results to:  ./SMI_active_learning_results/organmnist/ood/badge/50/fkna_3
+organmnist_ood_AL_11_badge_budget:50_epochs:10_linear:True_runsfkna_3
+AL epoch:  0
+initial training epoch
+Init model loaded from disk, skipping init training:  /mnt/data2/akshit/Organ/weights/organmnist_ood_ResNet18_0.01_10_10_11
+AL epoch:  1
+val, test error% for class  0  :  10.0 20.0
+val, test error% for class  1  :  0.0 30.67
+val, test error% for class  2  :  50.0 47.0
+val, test error% for class  3  :  10.0 18.0
+val, test error% for class  4  :  90.0 93.0
+val, test error% for class  5  :  50.0 60.67
+val, test error% for class  6  :  30.0 52.33
+val, test error% for class  7  :  0.0 14.67
+val, test error% for class  8  :  0.0 17.33
+val, test error% for class  9  :  70.0 62.0
+val, test error% for class  10  :  50.0 83.33
+11 / 50  idc points.
+selEpoch: 1, Selection Ended at: 2022-02-03 03:50:58.473263
+11 9050 9100
+After augmentation, size of train_set:  160  lake set:  9050  val set:  121
+Selection Epoch  1  Training epoch [ 1 ]  Training Acc:  0.23125Selection Epoch  1  Training epoch [ 2 ]  Training Acc:  0.175Selection Epoch  1  Training epoch [ 3 ]  Training Acc:  0.3875Selection Epoch  1  Training epoch [ 4 ]  Training Acc:  0.23125Selection Epoch  1  Training epoch [ 5 ]  Training Acc:  0.4625Selection Epoch  1  Training epoch [ 6 ]  Training Acc:  0.8625Selection Epoch  1  Training epoch [ 7 ]  Training Acc:  0.55625Selection Epoch  1  Training epoch [ 8 ]  Training Acc:  0.96875Selection Epoch  1  Training epoch [ 9 ]  Training Acc:  0.98125Selection Epoch  1  Training epoch [ 10 ]  Training Acc:  0.98125Selection Epoch  1  Training epoch [ 11 ]  Training Acc:  1.0Epoch: 2 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.03245485993102193 1.0 1.1710201501846313 0.6942148760330579 51.48134934902191 0.59 5.788255453109741
+AL epoch:  2
+val, test error% for class  0  :  18.18 31.67
+val, test error% for class  1  :  10.0 38.0
+val, test error% for class  2  :  80.0 44.33
+val, test error% for class  3  :  10.0 18.67
+val, test error% for class  4  :  54.55 53.67
+val, test error% for class  5  :  60.0 74.67
+val, test error% for class  6  :  16.67 37.67
+val, test error% for class  7  :  27.27 32.67
+val, test error% for class  8  :  0.0 4.33
+val, test error% for class  9  :  36.36 61.0
+val, test error% for class  10  :  30.77 54.33
+27 / 50  idc points.
+selEpoch: 2, Selection Ended at: 2022-02-03 03:51:26.981836
+27 9000 9050
+After augmentation, size of train_set:  210  lake set:  9000  val set:  148
+Selection Epoch  2  Training epoch [ 1 ]  Training Acc:  0.14285714285714285Selection Epoch  2  Training epoch [ 2 ]  Training Acc:  0.1523809523809524Selection Epoch  2  Training epoch [ 3 ]  Training Acc:  0.3047619047619048Selection Epoch  2  Training epoch [ 4 ]  Training Acc:  0.36666666666666664Selection Epoch  2  Training epoch [ 5 ]  Training Acc:  0.7523809523809524Selection Epoch  2  Training epoch [ 6 ]  Training Acc:  0.8238095238095238Selection Epoch  2  Training epoch [ 7 ]  Training Acc:  0.9380952380952381Selection Epoch  2  Training epoch [ 8 ]  Training Acc:  0.9857142857142858Selection Epoch  2  Training epoch [ 9 ]  Training Acc:  0.9523809523809523Selection Epoch  2  Training epoch [ 10 ]  Training Acc:  1.0Epoch: 3 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.10004691407084465 1.0 1.049517035484314 0.7905405405405406 59.488101065158844 0.6003030303030303 6.8247973918914795
+AL epoch:  3
+val, test error% for class  0  :  16.67 20.67
+val, test error% for class  1  :  0.0 43.33
+val, test error% for class  2  :  72.73 36.33
+val, test error% for class  3  :  20.0 28.67
+val, test error% for class  4  :  53.33 60.67
+val, test error% for class  5  :  53.85 88.67
+val, test error% for class  6  :  15.38 30.0
+val, test error% for class  7  :  0.0 26.33
+val, test error% for class  8  :  0.0 17.67
+val, test error% for class  9  :  0.0 30.33
+val, test error% for class  10  :  11.76 57.0
+40 / 50  idc points.
+selEpoch: 3, Selection Ended at: 2022-02-03 03:51:56.374619
+40 8950 9000
+After augmentation, size of train_set:  260  lake set:  8950  val set:  188
+Selection Epoch  3  Training epoch [ 1 ]  Training Acc:  0.12307692307692308Selection Epoch  3  Training epoch [ 2 ]  Training Acc:  0.1Selection Epoch  3  Training epoch [ 3 ]  Training Acc:  0.7384615384615385Selection Epoch  3  Training epoch [ 4 ]  Training Acc:  0.676923076923077Selection Epoch  3  Training epoch [ 5 ]  Training Acc:  0.43846153846153846Selection Epoch  3  Training epoch [ 6 ]  Training Acc:  0.8423076923076923Selection Epoch  3  Training epoch [ 7 ]  Training Acc:  0.9461538461538461Selection Epoch  3  Training epoch [ 8 ]  Training Acc:  0.9153846153846154Selection Epoch  3  Training epoch [ 9 ]  Training Acc:  0.9692307692307692Selection Epoch  3  Training epoch [ 10 ]  Training Acc:  0.9923076923076923Epoch: 4 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.3657087367027998 0.9923076923076923 0.6120725274085999 0.8563829787234043 44.30766848102212 0.6827272727272727 8.581363201141357
+AL epoch:  4
+val, test error% for class  0  :  23.08 21.0
+val, test error% for class  1  :  21.43 35.67
+val, test error% for class  2  :  11.76 12.67
+val, test error% for class  3  :  7.69 18.67
+val, test error% for class  4  :  11.54 46.33
+val, test error% for class  5  :  33.33 69.0
+val, test error% for class  6  :  26.67 42.67
+val, test error% for class  7  :  0.0 6.67
+val, test error% for class  8  :  0.0 1.33
+val, test error% for class  9  :  5.26 34.0
+val, test error% for class  10  :  15.79 61.0
+39 / 50  idc points.
+selEpoch: 4, Selection Ended at: 2022-02-03 03:52:27.333637
+39 8900 8950
+After augmentation, size of train_set:  310  lake set:  8900  val set:  227
+Selection Epoch  4  Training epoch [ 1 ]  Training Acc:  0.1Selection Epoch  4  Training epoch [ 2 ]  Training Acc:  0.13225806451612904Selection Epoch  4  Training epoch [ 3 ]  Training Acc:  0.6Selection Epoch  4  Training epoch [ 4 ]  Training Acc:  0.6903225806451613Selection Epoch  4  Training epoch [ 5 ]  Training Acc:  0.9Selection Epoch  4  Training epoch [ 6 ]  Training Acc:  0.9838709677419355Selection Epoch  4  Training epoch [ 7 ]  Training Acc:  0.9838709677419355Selection Epoch  4  Training epoch [ 8 ]  Training Acc:  0.9290322580645162Selection Epoch  4  Training epoch [ 9 ]  Training Acc:  1.0Epoch: 5 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.22501149447634816 1.0 0.5150400400161743 0.8810572687224669 46.65296117961407 0.6581818181818182 9.125932216644287
+AL epoch:  5
+val, test error% for class  0  :  25.0 47.33
+val, test error% for class  1  :  0.0 28.67
+val, test error% for class  2  :  17.65 26.33
+val, test error% for class  3  :  6.67 28.0
+val, test error% for class  4  :  13.33 46.67
+val, test error% for class  5  :  11.54 48.0
+val, test error% for class  6  :  4.35 6.0
+val, test error% for class  7  :  23.53 31.0
+val, test error% for class  8  :  0.0 14.0
+val, test error% for class  9  :  12.5 54.0
+val, test error% for class  10  :  15.38 46.0
+41 / 50  idc points.
+selEpoch: 5, Selection Ended at: 2022-02-03 03:52:58.970587
+41 8850 8900
+After augmentation, size of train_set:  360  lake set:  8850  val set:  268
+Selection Epoch  5  Training epoch [ 1 ]  Training Acc:  0.08888888888888889Selection Epoch  5  Training epoch [ 2 ]  Training Acc:  0.2222222222222222Selection Epoch  5  Training epoch [ 3 ]  Training Acc:  0.6611111111111111Selection Epoch  5  Training epoch [ 4 ]  Training Acc:  0.7833333333333333Selection Epoch  5  Training epoch [ 5 ]  Training Acc:  0.9055555555555556Selection Epoch  5  Training epoch [ 6 ]  Training Acc:  0.8416666666666667Selection Epoch  5  Training epoch [ 7 ]  Training Acc:  0.975Selection Epoch  5  Training epoch [ 8 ]  Training Acc:  0.9861111111111112Selection Epoch  5  Training epoch [ 9 ]  Training Acc:  0.9944444444444445Epoch: 6 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.5591332726180553 0.9944444444444445 0.588551938533783 0.8694029850746269 47.19400131702423 0.649090909090909 10.751362562179565
+AL epoch:  6
+val, test error% for class  0  :  5.26 16.33
+val, test error% for class  1  :  4.17 29.33
+val, test error% for class  2  :  5.0 22.33
+val, test error% for class  3  :  5.56 18.0
+val, test error% for class  4  :  18.18 66.0
+val, test error% for class  5  :  14.29 26.33
+val, test error% for class  6  :  29.17 74.67
+val, test error% for class  7  :  0.0 6.67
+val, test error% for class  8  :  6.25 7.0
+val, test error% for class  9  :  25.0 61.33
+val, test error% for class  10  :  16.67 58.0
+39 / 50  idc points.
+selEpoch: 6, Selection Ended at: 2022-02-03 03:53:32.348784
+39 8800 8850
+After augmentation, size of train_set:  410  lake set:  8800  val set:  307
+Selection Epoch  6  Training epoch [ 1 ]  Training Acc:  0.14390243902439023Selection Epoch  6  Training epoch [ 2 ]  Training Acc:  0.15853658536585366Selection Epoch  6  Training epoch [ 3 ]  Training Acc:  0.4634146341463415Selection Epoch  6  Training epoch [ 4 ]  Training Acc:  0.5829268292682926Selection Epoch  6  Training epoch [ 5 ]  Training Acc:  0.7634146341463415Selection Epoch  6  Training epoch [ 6 ]  Training Acc:  0.9292682926829269Selection Epoch  6  Training epoch [ 7 ]  Training Acc:  0.8658536585365854Selection Epoch  6  Training epoch [ 8 ]  Training Acc:  0.9Selection Epoch  6  Training epoch [ 9 ]  Training Acc:  0.9536585365853658Selection Epoch  6  Training epoch [ 10 ]  Training Acc:  1.0Epoch: 7 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.16749790380708873 1.0 0.3155527710914612 0.9413680781758957 33.867752611637115 0.7457575757575757 13.594208717346191
+AL epoch:  7
+val, test error% for class  0  :  5.0 25.0
+val, test error% for class  1  :  3.85 20.33
+val, test error% for class  2  :  9.09 23.33
+val, test error% for class  3  :  5.26 17.67
+val, test error% for class  4  :  10.53 59.0
+val, test error% for class  5  :  9.09 36.67
+val, test error% for class  6  :  2.86 13.0
+val, test error% for class  7  :  0.0 11.0
+val, test error% for class  8  :  0.0 9.0
+val, test error% for class  9  :  9.68 29.67
+val, test error% for class  10  :  5.0 35.0
+41 / 50  idc points.
+selEpoch: 7, Selection Ended at: 2022-02-03 03:54:08.403027
+41 8750 8800
+After augmentation, size of train_set:  460  lake set:  8750  val set:  348
+Selection Epoch  7  Training epoch [ 1 ]  Training Acc:  0.09565217391304348Selection Epoch  7  Training epoch [ 2 ]  Training Acc:  0.2543478260869565Selection Epoch  7  Training epoch [ 3 ]  Training Acc:  0.65Selection Epoch  7  Training epoch [ 4 ]  Training Acc:  0.7565217391304347Selection Epoch  7  Training epoch [ 5 ]  Training Acc:  0.8826086956521739Selection Epoch  7  Training epoch [ 6 ]  Training Acc:  0.9630434782608696Selection Epoch  7  Training epoch [ 7 ]  Training Acc:  0.9608695652173913Selection Epoch  7  Training epoch [ 8 ]  Training Acc:  0.9978260869565218Epoch: 8 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.5236192937009037 0.9978260869565218 0.22605085372924805 0.9281609195402298 32.66601265221834 0.7148484848484848 12.40427541732788
+AL epoch:  8
+val, test error% for class  0  :  3.85 14.33
+val, test error% for class  1  :  3.03 34.67
+val, test error% for class  2  :  3.85 18.0
+val, test error% for class  3  :  10.0 21.0
+val, test error% for class  4  :  8.33 52.33
+val, test error% for class  5  :  2.63 28.33
+val, test error% for class  6  :  5.56 12.33
+val, test error% for class  7  :  0.0 7.67
+val, test error% for class  8  :  0.0 0.33
+val, test error% for class  9  :  27.27 71.0
+val, test error% for class  10  :  9.52 53.67
+40 / 50  idc points.
+selEpoch: 8, Selection Ended at: 2022-02-03 03:54:46.126049
+40 8700 8750
+After augmentation, size of train_set:  510  lake set:  8700  val set:  388
+Selection Epoch  8  Training epoch [ 1 ]  Training Acc:  0.1607843137254902Selection Epoch  8  Training epoch [ 2 ]  Training Acc:  0.49607843137254903Selection Epoch  8  Training epoch [ 3 ]  Training Acc:  0.5470588235294118Selection Epoch  8  Training epoch [ 4 ]  Training Acc:  0.803921568627451Selection Epoch  8  Training epoch [ 5 ]  Training Acc:  0.7313725490196078Selection Epoch  8  Training epoch [ 6 ]  Training Acc:  0.9529411764705882Selection Epoch  8  Training epoch [ 7 ]  Training Acc:  0.8823529411764706Selection Epoch  8  Training epoch [ 8 ]  Training Acc:  0.8764705882352941Selection Epoch  8  Training epoch [ 9 ]  Training Acc:  0.9549019607843138Selection Epoch  8  Training epoch [ 10 ]  Training Acc:  0.903921568627451Selection Epoch  8  Training epoch [ 11 ]  Training Acc:  0.9921568627450981Epoch: 9 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.8249874445609748 0.9921568627450981 0.28032004833221436 0.9252577319587629 39.74651841074228 0.7196969696969697 18.64394474029541
+AL epoch:  9
+val, test error% for class  0  :  3.7 7.0
+val, test error% for class  1  :  0.0 16.0
+val, test error% for class  2  :  6.45 27.0
+val, test error% for class  3  :  5.0 29.33
+val, test error% for class  4  :  13.46 49.33
+val, test error% for class  5  :  18.18 68.33
+val, test error% for class  6  :  2.63 5.67
+val, test error% for class  7  :  0.0 4.67
+val, test error% for class  8  :  12.5 46.33
+val, test error% for class  9  :  6.98 25.33
+val, test error% for class  10  :  6.38 29.33
+40 / 50  idc points.
+selEpoch: 9, Selection Ended at: 2022-02-03 03:55:27.275155
+40 8650 8700
+After augmentation, size of train_set:  560  lake set:  8650  val set:  428
+Selection Epoch  9  Training epoch [ 1 ]  Training Acc:  0.1357142857142857Selection Epoch  9  Training epoch [ 2 ]  Training Acc:  0.30178571428571427Selection Epoch  9  Training epoch [ 3 ]  Training Acc:  0.6071428571428571Selection Epoch  9  Training epoch [ 4 ]  Training Acc:  0.95Selection Epoch  9  Training epoch [ 5 ]  Training Acc:  0.9196428571428571Selection Epoch  9  Training epoch [ 6 ]  Training Acc:  0.7071428571428572Selection Epoch  9  Training epoch [ 7 ]  Training Acc:  0.8928571428571429Selection Epoch  9  Training epoch [ 8 ]  Training Acc:  0.9446428571428571Selection Epoch  9  Training epoch [ 9 ]  Training Acc:  0.9767857142857143Selection Epoch  9  Training epoch [ 10 ]  Training Acc:  0.9857142857142858Selection Epoch  9  Training epoch [ 11 ]  Training Acc:  0.9375Selection Epoch  9  Training epoch [ 12 ]  Training Acc:  1.0Epoch: 10 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.1932951250928454 1.0 0.2626943588256836 0.955607476635514 36.62557974457741 0.7560606060606061 22.592599153518677
+val, test error% for class  0  :  3.45 11.67
+val, test error% for class  1  :  0.0 16.33
+val, test error% for class  2  :  7.89 15.67
+val, test error% for class  3  :  4.55 12.33
+val, test error% for class  4  :  5.56 52.67
+val, test error% for class  5  :  8.93 42.0
+val, test error% for class  6  :  0.0 16.0
+val, test error% for class  7  :  0.0 4.0
+val, test error% for class  8  :  0.0 5.0
+val, test error% for class  9  :  6.67 42.67
+val, test error% for class  10  :  6.0 50.0
+[[20.0, 30.67, 47.0, 18.0, 93.0, 60.67, 52.33, 14.67, 17.33, 62.0, 83.33, 45.36363636363637], [31.67, 38.0, 44.33, 18.67, 53.67, 74.67, 37.67, 32.67, 4.33, 61.0, 54.33, 41.0009090909091], [20.67, 43.33, 36.33, 28.67, 60.67, 88.67, 30.0, 26.33, 17.67, 30.33, 57.0, 39.97], [21.0, 35.67, 12.67, 18.67, 46.33, 69.0, 42.67, 6.67, 1.33, 34.0, 61.0, 31.728181818181817], [47.33, 28.67, 26.33, 28.0, 46.67, 48.0, 6.0, 31.0, 14.0, 54.0, 46.0, 34.18181818181818], [16.33, 29.33, 22.33, 18.0, 66.0, 26.33, 74.67, 6.67, 7.0, 61.33, 58.0, 35.09], [25.0, 20.33, 23.33, 17.67, 59.0, 36.67, 13.0, 11.0, 9.0, 29.67, 35.0, 25.424545454545456], [14.33, 34.67, 18.0, 21.0, 52.33, 28.33, 12.33, 7.67, 0.33, 71.0, 53.67, 28.514545454545456], [7.0, 16.0, 27.0, 29.33, 49.33, 68.33, 5.67, 4.67, 46.33, 25.33, 29.33, 28.029090909090904], [11.67, 16.33, 15.67, 12.33, 52.67, 42.0, 16.0, 4.0, 5.0, 42.67, 50.0, 24.394545454545458]]
+random random
+num ood samples:  8000
+CIFAR-10 Custom dataset stats: Train size:  110 Val size:  110 Lake size:  9100 Test set:  3300
+selected classes are:  [ 0  1  2  3  4  5  6  7  8  9 10]
+Saving results to:  ./SMI_active_learning_results/organmnist/ood/random/50/fkna_3
+organmnist_ood_random_11_random_budget:50_epochs:10_linear:True_runsfkna_3
+AL epoch:  0
+initial training epoch
+Init model loaded from disk, skipping init training:  /mnt/data2/akshit/Organ/weights/organmnist_ood_ResNet18_0.01_10_10_11
+AL epoch:  1
+val, test error% for class  0  :  10.0 20.0
+val, test error% for class  1  :  0.0 30.67
+val, test error% for class  2  :  50.0 47.0
+val, test error% for class  3  :  10.0 18.0
+val, test error% for class  4  :  90.0 93.0
+val, test error% for class  5  :  50.0 60.67
+val, test error% for class  6  :  30.0 52.33
+val, test error% for class  7  :  0.0 14.67
+val, test error% for class  8  :  0.0 17.33
+val, test error% for class  9  :  70.0 62.0
+val, test error% for class  10  :  50.0 83.33
+7 / 50  idc points.
+selEpoch: 1, Selection Ended at: 2022-02-03 03:55:53.693250
+7 9050 9100
+After augmentation, size of train_set:  160  lake set:  9050  val set:  117
+Selection Epoch  1  Training epoch [ 1 ]  Training Acc:  0.3375Selection Epoch  1  Training epoch [ 2 ]  Training Acc:  0.2875Selection Epoch  1  Training epoch [ 3 ]  Training Acc:  0.3Selection Epoch  1  Training epoch [ 4 ]  Training Acc:  0.2375Selection Epoch  1  Training epoch [ 5 ]  Training Acc:  0.89375Selection Epoch  1  Training epoch [ 6 ]  Training Acc:  0.8125Selection Epoch  1  Training epoch [ 7 ]  Training Acc:  0.775Selection Epoch  1  Training epoch [ 8 ]  Training Acc:  0.9875Selection Epoch  1  Training epoch [ 9 ]  Training Acc:  0.89375Selection Epoch  1  Training epoch [ 10 ]  Training Acc:  0.84375Selection Epoch  1  Training epoch [ 11 ]  Training Acc:  0.8375Selection Epoch  1  Training epoch [ 12 ]  Training Acc:  0.925Selection Epoch  1  Training epoch [ 13 ]  Training Acc:  0.95Selection Epoch  1  Training epoch [ 14 ]  Training Acc:  1.0Epoch: 2 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.040350843919441104 1.0 2.0250906944274902 0.5299145299145299 80.60390285402536 0.5081818181818182 7.443823337554932
+AL epoch:  2
+val, test error% for class  0  :  60.0 26.33
+val, test error% for class  1  :  0.0 38.0
+val, test error% for class  2  :  60.0 25.0
+val, test error% for class  3  :  27.27 23.33
+val, test error% for class  4  :  100.0 91.0
+val, test error% for class  5  :  38.46 60.67
+val, test error% for class  6  :  70.0 73.33
+val, test error% for class  7  :  27.27 41.67
+val, test error% for class  8  :  0.0 5.67
+val, test error% for class  9  :  70.0 75.0
+val, test error% for class  10  :  80.0 81.0
+8 / 50  idc points.
+selEpoch: 2, Selection Ended at: 2022-02-03 03:56:02.178922
+8 9000 9050
+After augmentation, size of train_set:  210  lake set:  9000  val set:  125
+Selection Epoch  2  Training epoch [ 1 ]  Training Acc:  0.2857142857142857Selection Epoch  2  Training epoch [ 2 ]  Training Acc:  0.09523809523809523Selection Epoch  2  Training epoch [ 3 ]  Training Acc:  0.2Selection Epoch  2  Training epoch [ 4 ]  Training Acc:  0.819047619047619Selection Epoch  2  Training epoch [ 5 ]  Training Acc:  0.9142857142857143Selection Epoch  2  Training epoch [ 6 ]  Training Acc:  0.9333333333333333Selection Epoch  2  Training epoch [ 7 ]  Training Acc:  0.9714285714285714Selection Epoch  2  Training epoch [ 8 ]  Training Acc:  0.9047619047619048Selection Epoch  2  Training epoch [ 9 ]  Training Acc:  0.861904761904762Selection Epoch  2  Training epoch [ 10 ]  Training Acc:  0.9666666666666667Selection Epoch  2  Training epoch [ 11 ]  Training Acc:  1.0Epoch: 3 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.04763322044163942 1.0 1.2853572368621826 0.704 62.96132545173168 0.5578787878787879 7.574352741241455
+AL epoch:  3
+val, test error% for class  0  :  20.0 18.67
+val, test error% for class  1  :  0.0 27.67
+val, test error% for class  2  :  18.18 21.33
+val, test error% for class  3  :  16.67 24.67
+val, test error% for class  4  :  66.67 88.67
+val, test error% for class  5  :  50.0 69.33
+val, test error% for class  6  :  40.0 58.67
+val, test error% for class  7  :  0.0 9.67
+val, test error% for class  8  :  0.0 30.33
+val, test error% for class  9  :  45.45 55.33
+val, test error% for class  10  :  70.0 82.0
+7 / 50  idc points.
+selEpoch: 3, Selection Ended at: 2022-02-03 03:56:10.791834
+7 8950 9000
+After augmentation, size of train_set:  260  lake set:  8950  val set:  132
+Selection Epoch  3  Training epoch [ 1 ]  Training Acc:  0.23846153846153847Selection Epoch  3  Training epoch [ 2 ]  Training Acc:  0.24615384615384617Selection Epoch  3  Training epoch [ 3 ]  Training Acc:  0.35Selection Epoch  3  Training epoch [ 4 ]  Training Acc:  0.65Selection Epoch  3  Training epoch [ 5 ]  Training Acc:  0.9307692307692308Selection Epoch  3  Training epoch [ 6 ]  Training Acc:  0.9769230769230769Selection Epoch  3  Training epoch [ 7 ]  Training Acc:  0.9961538461538462Epoch: 4 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.26748899812810123 0.9961538461538462 1.1577460765838623 0.7121212121212122 54.16505941748619 0.6027272727272728 6.034811019897461
+AL epoch:  4
+val, test error% for class  0  :  27.27 27.33
+val, test error% for class  1  :  0.0 30.67
+val, test error% for class  2  :  27.27 36.0
+val, test error% for class  3  :  30.77 37.33
+val, test error% for class  4  :  58.33 79.67
+val, test error% for class  5  :  35.71 55.33
+val, test error% for class  6  :  40.0 52.67
+val, test error% for class  7  :  25.0 35.33
+val, test error% for class  8  :  0.0 1.33
+val, test error% for class  9  :  21.43 24.0
+val, test error% for class  10  :  54.55 57.33
+6 / 50  idc points.
+selEpoch: 4, Selection Ended at: 2022-02-03 03:56:17.852653
+6 8900 8950
+After augmentation, size of train_set:  310  lake set:  8900  val set:  138
+Selection Epoch  4  Training epoch [ 1 ]  Training Acc:  0.34516129032258064Selection Epoch  4  Training epoch [ 2 ]  Training Acc:  0.5612903225806452Selection Epoch  4  Training epoch [ 3 ]  Training Acc:  0.6548387096774193Selection Epoch  4  Training epoch [ 4 ]  Training Acc:  0.46774193548387094Selection Epoch  4  Training epoch [ 5 ]  Training Acc:  0.5580645161290323Selection Epoch  4  Training epoch [ 6 ]  Training Acc:  0.8806451612903226Selection Epoch  4  Training epoch [ 7 ]  Training Acc:  0.9806451612903225Selection Epoch  4  Training epoch [ 8 ]  Training Acc:  0.964516129032258Selection Epoch  4  Training epoch [ 9 ]  Training Acc:  0.9935483870967742Epoch: 5 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.4517620336264372 0.9935483870967742 1.2707692384719849 0.7101449275362319 62.23713992536068 0.546060606060606 9.256770610809326
+AL epoch:  5
+val, test error% for class  0  :  25.0 26.0
+val, test error% for class  1  :  0.0 42.0
+val, test error% for class  2  :  66.67 67.0
+val, test error% for class  3  :  23.08 32.67
+val, test error% for class  4  :  83.33 88.67
+val, test error% for class  5  :  28.57 63.67
+val, test error% for class  6  :  25.0 61.33
+val, test error% for class  7  :  0.0 17.33
+val, test error% for class  8  :  0.0 4.67
+val, test error% for class  9  :  6.25 11.67
+val, test error% for class  10  :  72.73 84.33
+5 / 50  idc points.
+selEpoch: 5, Selection Ended at: 2022-02-03 03:56:28.153323
+5 8850 8900
+After augmentation, size of train_set:  360  lake set:  8850  val set:  143
+Selection Epoch  5  Training epoch [ 1 ]  Training Acc:  0.16944444444444445Selection Epoch  5  Training epoch [ 2 ]  Training Acc:  0.4361111111111111Selection Epoch  5  Training epoch [ 3 ]  Training Acc:  0.875Selection Epoch  5  Training epoch [ 4 ]  Training Acc:  0.8194444444444444Selection Epoch  5  Training epoch [ 5 ]  Training Acc:  0.9277777777777778Selection Epoch  5  Training epoch [ 6 ]  Training Acc:  0.9777777777777777Selection Epoch  5  Training epoch [ 7 ]  Training Acc:  0.9416666666666667Selection Epoch  5  Training epoch [ 8 ]  Training Acc:  0.9638888888888889Selection Epoch  5  Training epoch [ 9 ]  Training Acc:  1.0Epoch: 6 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.2619107522186823 1.0 0.9477677941322327 0.7762237762237763 51.19118844717741 0.6072727272727273 10.907705307006836
+AL epoch:  6
+val, test error% for class  0  :  7.69 30.0
+val, test error% for class  1  :  0.0 29.33
+val, test error% for class  2  :  30.77 38.67
+val, test error% for class  3  :  7.69 22.33
+val, test error% for class  4  :  38.46 45.33
+val, test error% for class  5  :  35.71 54.0
+val, test error% for class  6  :  30.77 57.67
+val, test error% for class  7  :  8.33 30.0
+val, test error% for class  8  :  0.0 3.0
+val, test error% for class  9  :  12.5 27.67
+val, test error% for class  10  :  81.82 94.0
+8 / 50  idc points.
+selEpoch: 6, Selection Ended at: 2022-02-03 03:56:40.092139
+8 8800 8850
+After augmentation, size of train_set:  410  lake set:  8800  val set:  151
+Selection Epoch  6  Training epoch [ 1 ]  Training Acc:  0.17073170731707318Selection Epoch  6  Training epoch [ 2 ]  Training Acc:  0.35853658536585364Selection Epoch  6  Training epoch [ 3 ]  Training Acc:  0.6170731707317073Selection Epoch  6  Training epoch [ 4 ]  Training Acc:  0.9121951219512195Selection Epoch  6  Training epoch [ 5 ]  Training Acc:  0.9097560975609756Selection Epoch  6  Training epoch [ 6 ]  Training Acc:  0.9609756097560975Selection Epoch  6  Training epoch [ 7 ]  Training Acc:  0.9658536585365853Selection Epoch  6  Training epoch [ 8 ]  Training Acc:  0.9829268292682927Selection Epoch  6  Training epoch [ 9 ]  Training Acc:  0.875609756097561Selection Epoch  6  Training epoch [ 10 ]  Training Acc:  0.9951219512195122Epoch: 7 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.23708586159045808 0.9951219512195122 0.972648561000824 0.7483443708609272 51.38293056190014 0.5893939393939394 13.735519170761108
+AL epoch:  7
+val, test error% for class  0  :  14.29 34.0
+val, test error% for class  1  :  0.0 28.67
+val, test error% for class  2  :  84.62 72.33
+val, test error% for class  3  :  18.75 32.67
+val, test error% for class  4  :  30.77 47.33
+val, test error% for class  5  :  33.33 60.0
+val, test error% for class  6  :  38.46 55.67
+val, test error% for class  7  :  0.0 6.67
+val, test error% for class  8  :  0.0 20.0
+val, test error% for class  9  :  12.5 31.33
+val, test error% for class  10  :  50.0 63.0
+7 / 50  idc points.
+selEpoch: 7, Selection Ended at: 2022-02-03 03:56:54.884401
+7 8750 8800
+After augmentation, size of train_set:  460  lake set:  8750  val set:  158
+Selection Epoch  7  Training epoch [ 1 ]  Training Acc:  0.4826086956521739Selection Epoch  7  Training epoch [ 2 ]  Training Acc:  0.8282608695652174Selection Epoch  7  Training epoch [ 3 ]  Training Acc:  0.9304347826086956Selection Epoch  7  Training epoch [ 4 ]  Training Acc:  0.9326086956521739Selection Epoch  7  Training epoch [ 5 ]  Training Acc:  0.9173913043478261Selection Epoch  7  Training epoch [ 6 ]  Training Acc:  0.9043478260869565Selection Epoch  7  Training epoch [ 7 ]  Training Acc:  0.9478260869565217Selection Epoch  7  Training epoch [ 8 ]  Training Acc:  1.0Epoch: 8 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.17388870939612389 1.0 0.7193892002105713 0.8164556962025317 48.15244546532631 0.5957575757575757 12.422101020812988
+AL epoch:  8
+val, test error% for class  0  :  14.29 27.67
+val, test error% for class  1  :  16.67 51.0
+val, test error% for class  2  :  14.29 19.67
+val, test error% for class  3  :  5.88 22.67
+val, test error% for class  4  :  30.77 55.67
+val, test error% for class  5  :  20.0 45.67
+val, test error% for class  6  :  35.71 65.33
+val, test error% for class  7  :  0.0 8.0
+val, test error% for class  8  :  0.0 19.33
+val, test error% for class  9  :  23.53 48.33
+val, test error% for class  10  :  50.0 81.33
+3 / 50  idc points.
+selEpoch: 8, Selection Ended at: 2022-02-03 03:57:08.346099
+3 8700 8750
+After augmentation, size of train_set:  510  lake set:  8700  val set:  161
+Selection Epoch  8  Training epoch [ 1 ]  Training Acc:  0.08823529411764706Selection Epoch  8  Training epoch [ 2 ]  Training Acc:  0.7137254901960784Selection Epoch  8  Training epoch [ 3 ]  Training Acc:  0.8372549019607843Selection Epoch  8  Training epoch [ 4 ]  Training Acc:  0.8784313725490196Selection Epoch  8  Training epoch [ 5 ]  Training Acc:  0.9568627450980393Selection Epoch  8  Training epoch [ 6 ]  Training Acc:  0.9941176470588236Epoch: 9 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 0.7851792606525123 0.9941176470588236 0.9404510259628296 0.7701863354037267 48.889872550964355 0.6124242424242424 10.383803606033325
+AL epoch:  9
+val, test error% for class  0  :  42.86 66.33
+val, test error% for class  1  :  0.0 36.67
+val, test error% for class  2  :  26.67 23.0
+val, test error% for class  3  :  11.76 34.67
+val, test error% for class  4  :  53.85 57.0
+val, test error% for class  5  :  53.33 79.0
+val, test error% for class  6  :  14.29 21.0
+val, test error% for class  7  :  0.0 22.0
+val, test error% for class  8  :  5.88 7.33
+val, test error% for class  9  :  17.65 18.0
+val, test error% for class  10  :  30.77 61.33
+7 / 50  idc points.
+selEpoch: 9, Selection Ended at: 2022-02-03 03:57:20.128187
+7 8650 8700
+After augmentation, size of train_set:  560  lake set:  8650  val set:  168
+Selection Epoch  9  Training epoch [ 1 ]  Training Acc:  0.2517857142857143Selection Epoch  9  Training epoch [ 2 ]  Training Acc:  0.7285714285714285Selection Epoch  9  Training epoch [ 3 ]  Training Acc:  0.8821428571428571Selection Epoch  9  Training epoch [ 4 ]  Training Acc:  0.8410714285714286Selection Epoch  9  Training epoch [ 5 ]  Training Acc:  0.9071428571428571Selection Epoch  9  Training epoch [ 6 ]  Training Acc:  0.9339285714285714Selection Epoch  9  Training epoch [ 7 ]  Training Acc:  0.925Selection Epoch  9  Training epoch [ 8 ]  Training Acc:  0.9910714285714286Epoch: 10 FullTrn,TrainAcc,ValLoss,ValAcc,TstLoss,TstAcc,Time: 1.6058857566677034 0.9910714285714286 1.0135860443115234 0.8035714285714286 56.95904892683029 0.59 15.127454996109009
+val, test error% for class  0  :  7.14 19.33
+val, test error% for class  1  :  0.0 46.0
+val, test error% for class  2  :  25.0 23.0
+val, test error% for class  3  :  21.05 43.33
+val, test error% for class  4  :  53.85 92.33
+val, test error% for class  5  :  31.25 70.67
+val, test error% for class  6  :  14.29 23.67
+val, test error% for class  7  :  14.29 32.33
+val, test error% for class  8  :  0.0 14.33
+val, test error% for class  9  :  23.53 29.33
+val, test error% for class  10  :  30.77 56.67
+[[20.0, 30.67, 47.0, 18.0, 93.0, 60.67, 52.33, 14.67, 17.33, 62.0, 83.33, 45.36363636363637], [26.33, 38.0, 25.0, 23.33, 91.0, 60.67, 73.33, 41.67, 5.67, 75.0, 81.0, 49.18181818181818], [18.67, 27.67, 21.33, 24.67, 88.67, 69.33, 58.67, 9.67, 30.33, 55.33, 82.0, 44.21272727272727], [27.33, 30.67, 36.0, 37.33, 79.67, 55.33, 52.67, 35.33, 1.33, 24.0, 57.33, 39.72636363636363], [26.0, 42.0, 67.0, 32.67, 88.67, 63.67, 61.33, 17.33, 4.67, 11.67, 84.33, 45.39454545454546], [30.0, 29.33, 38.67, 22.33, 45.33, 54.0, 57.67, 30.0, 3.0, 27.67, 94.0, 39.27272727272727], [34.0, 28.67, 72.33, 32.67, 47.33, 60.0, 55.67, 6.67, 20.0, 31.33, 63.0, 41.06090909090909], [27.67, 51.0, 19.67, 22.67, 55.67, 45.67, 65.33, 8.0, 19.33, 48.33, 81.33, 40.42454545454545], [66.33, 36.67, 23.0, 34.67, 57.0, 79.0, 21.0, 22.0, 7.33, 18.0, 61.33, 38.75727272727273], [19.33, 46.0, 23.0, 43.33, 92.33, 70.67, 23.67, 32.33, 14.33, 29.33, 56.67, 40.99909090909091]]

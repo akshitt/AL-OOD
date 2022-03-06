@@ -70,7 +70,7 @@ embedding_type = "gradients"
 num_cls=7
 budget=30
 num_epochs = int(10)
-split_cfg = {'num_cls_idc':num_cls, 'per_idc_train':20, 'per_idc_val':0, 'per_idc_lake':180, 'per_ood_train':0, 'per_ood_val':20, 'per_ood_lake':5000}
+split_cfg = {'num_cls_idc':num_cls, 'per_idc_train':20, 'per_idc_val':0, 'per_idc_lake':180, 'per_ood_train':0, 'per_ood_val':1, 'per_ood_lake':1000}
 
 initModelPath = "/mnt/data2/akshit/Derma/weights/" + data_name + "_" + feature + "_" + model_name + "_" + str(learning_rate) + "_" + str(split_cfg["per_idc_train"]) + "_" + str(split_cfg["per_idc_val"]) + "_" + str(split_cfg["num_cls_idc"])
 
@@ -343,6 +343,8 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
     optimizer = optimizer_without_scheduler(model, learning_rate)
     private_set = train_set
 
+    ood_points=[]
+
     for i in range(num_epochs):
         print("AL epoch: ", i)
         tst_loss = 0
@@ -389,7 +391,7 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
                         tst_total += targets.size(0)
                         tst_correct += predicted.eq(targets).sum().item()
                         final_tst_predictions += list(predicted.cpu().numpy())
-                        final_tst_classifications += list(predicted.eq(targets).cpu().numpy())                
+                        final_tst_classifications += list(predicted.eq(targets).cpu().numpy())
                     best_val_acc = (val_correct/val_total)
                     val_acc[i] = val_correct / val_total
                     tst_acc[i] = tst_correct / tst_total
@@ -444,6 +446,7 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
             lake_subset_idxs = subset #indices wrt to lake that need to be removed from the lake
             if(feature=="ood"): #remove ood points from the subset
                 subset = remove_ood_points(true_lake_set, subset, sel_cls_idx)
+                ood_points.append(budget-len(subset))
             
             print("selEpoch: %d, Selection Ended at:" % (i), str(datetime.datetime.now()))
             perClsSel = getPerClassSel(true_lake_set, lake_subset_idxs, num_cls)
@@ -565,6 +568,7 @@ def train_model_al(datkbuildPath, exePath, num_epochs, dataset_name, datadir, fe
     with open(os.path.join(all_logs_dir, exp_name+".json"), 'w') as fp:
         json.dump(res_dict, fp)
     
+    print(f'Number of OOD points selected in each respective round of {sf} are:{ood_points}')
     return tst_acc
 
 
@@ -597,7 +601,12 @@ for i in range(3):
 flmic = np.average(flmic, axis=0)    
 plt.plot(flmic, label=f'flmic')
 
-
+# Random
+random=[]
+for i in range(3):
+    random.append(train_model_al(datkbuildPath, exePath, num_epochs, data_name, datadir, feature, model_name, budget, split_cfg, learning_rate, run, device, computeClassErrorLog, "random",'random'))
+random = np.average(random, axis=0)    
+plt.plot(random, label=f'random')
 
 plt.xlabel('AL epochs')
 plt.ylabel('Test Accuracy')
